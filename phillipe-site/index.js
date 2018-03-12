@@ -27,7 +27,11 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact')
+    var info = {
+        email: "Phillipe@ga.com",
+        phone: "(818) 987-1234"
+    }
+    res.render('contact', {info})
 })
 
 app.get('/food', (req, res) => {
