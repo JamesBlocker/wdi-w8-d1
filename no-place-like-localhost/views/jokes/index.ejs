@@ -1,0 +1,9 @@
+<h1>Number of jokes: <%= jokes.length %> </h1>
+
+<ul>
+    <% jokes.forEach((j) => { %>
+        <li>
+            <a href="/jokes/<%= j._id %>"><%= j.setUp %></a>
+        </li>
+    <% }) %>
+</ul>
