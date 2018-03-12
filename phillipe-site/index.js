@@ -10,16 +10,20 @@ app.use(ejsLayouts)
 
 app.get('/', (req, res) => {
     var info = {
-        title: 'Hello'
+        title: 'Hello',
+        subject: "This is the new page for Uncle Phillipe",
+        line: "Ain't it great?"
     }
     res.render('index', {info})
 })
 
 app.get('/about', (req, res) => {
-    // var info = {
-    //     title: "About me"
-    // }
-    res.render('about')
+    var info = {
+        title: "About me",
+        subject: "Phillipe Luchansky",
+        bio: "This a long a beautifully written bio all about Phillipe, ain't he great?"
+    }
+    res.render('about', {info})
 })
 
 app.get('/contact', (req, res) => {
