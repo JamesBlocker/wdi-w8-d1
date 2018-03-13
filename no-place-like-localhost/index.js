@@ -18,6 +18,9 @@ app.set('views', `${__dirname}/views`)
 // any folders in the view files will be ejs type
 app.set('view engine', 'ejs')
 
+// public 
+app.use(express.static(`${__dirname}/public`))
+
 // middleware
 app.use(methodOverride('_method'))
 app.use(logger('dev'))
